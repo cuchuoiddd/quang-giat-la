@@ -1,0 +1,73 @@
+$XS:     320px;   
+$MXS :   425px;
+$SM:     768px;  
+$MD:    1024px;   
+$XL:   1170px;     
+
+// media queries
+
+@mixin responsive($canvas) {
+  @if $canvas == XS {
+   @media only screen and (min-width: $XS) and (max-width: $SM) { @content; } 
+  }
+  @else if $canvas == MXS {
+    @media only screen and (min-width: $MXS) and (max-width: $SM) { @content; } 
+   }
+  @else if $canvas == SM {
+   @media only screen and (min-width: $SM) { @content; } 
+  }
+  @else if $canvas == MD {
+   @media only screen and (min-width: $MD) { @content; } 
+  }
+  @else if $canvas == XL {
+   @media only screen and (min-width: $XL) { @content; } 
+  }
+}
+
+.text-white{
+    color:white;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.pos-bot-right{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.pos-bot-left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.pos-center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.with-underline{
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.with-topline{
+    border-top: 2px solid white;
+    padding-top: 5px;
+    margin-top: -5px;
+}
+.mb50{
+    margin-bottom: 50px;
+}
+
+.flex-wrap-mobile{
+    @include responsive(XS) {
+        flex-wrap: wrap;
+    }
+}
