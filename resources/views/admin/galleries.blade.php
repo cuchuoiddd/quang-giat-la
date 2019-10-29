@@ -1,8 +1,8 @@
 @extends('layouts.admin')
-@section('title', 'Danh sách gallery')
-@section('pageTitle','Danh sách gallery')
+@section('title', 'Danh sách brand')
+@section('pageTitle','Danh sách brand')
 @section('header-right')
-<a href="{{url('admin/galleries/create')}}"><button type="button" class="btn btn-block btn-primary">Thêm mới</button></a>
+<a href="{{url('admin/brands/create')}}"><button type="button" class="btn btn-block btn-primary">Thêm mới</button></a>
 @endsection
 
 @section('content')
@@ -30,8 +30,8 @@
                                 <td>{{$st->url}}</td>
                                 <td class="action">
                                     <div class="btn-group">
-                                        <form action="{{ url('admin/galleries/'.$st->id) }}" method="POST">
-                                            <a href="{{url('admin/galleries/'.$st->id.'/edit')}}"
+                                        <form action="{{ url('admin/brands/'.$st->id) }}" method="POST">
+                                            <a href="{{url('admin/brands/'.$st->id.'/edit')}}"
                                             class="btn btn-info">Sửa</a>
                                             @csrf
                                             @method('DELETE')

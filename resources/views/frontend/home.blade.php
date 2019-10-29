@@ -13,7 +13,9 @@
     <link href='{{url("css/styles.css")}}' type="text/css"  rel="stylesheet" />
 	<title>Hello, world!</title>
 </head>
-
+@php
+    $setting = Helper::getSettings();
+@endphp
 <body>
 	<header class="header-top mb50">
 		<div class="container">
@@ -23,248 +25,53 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-					<a class="navbar-brand" href="#">Hidden brand</a>
+					<a class="navbar-brand" href="#"><img alt="{{$setting->alt_logo}}" src="{{$setting->logo}}" /></a>
 					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 						<li class="icon-header">
+                            <a target="_blank" href="{{$setting->facebook}}">
 							<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
 								viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
 								<path
 									d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z">
 								</path>
 							</svg>
+                            </a>    
 						</li>
 						<li class="icon-header">
+                            <a target="_blank" href="{{$setting->twitter}}">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)"> <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"></path> </svg>
+                            </a>
+                        </li>
+						<li class="icon-header">
+                            <a target="_blank" href="{{$setting->instagram}}">
 							<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
 								viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
 								<path
 									d="M20,6.5A0.5,0.5 0 0,1 19.5,7H17.5A0.5,0.5 0 0,1 17,6.5V4.5A0.5,0.5 0 0,1 17.5,4H19.5A0.5,0.5 0 0,1 20,4.5M4.5,20A0.5,0.5 0 0,1 4,19.5V11H6.09C6.03,11.32 6,11.66 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12C18,11.66 17.96,11.32 17.91,11H20V19.5A0.5,0.5 0 0,1 19.5,20M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
 								</path>
 							</svg>
+                            </a>
 						</li>
 						<li class="icon-header">
-							<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
-								viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-								<path
-									d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z">
-								</path>
-							</svg>
-						</li>
+                            <a target="_blank" href="{{$setting->youtube}}">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)"> <path d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z"></path> </svg>
+                            </a>
+                        </li>
 					</ul>
 				</div>
 			</nav>
+            @if(isset($setting->main_text) && $setting->main_text != '')
 			<div class="spot-light-box">
 				<div class="inner-box">
-					<h6 class="text-white small" lp-node="h1">
-						<font color="#ffffff">Dành cho phái đẹp</font>
-					</h6>
-					<h1 class="text-white big" lp-node="h1">THỜI TRANG ĐÔNG XUÂN</h1>
-					<h6 class="text-white small" lp-node="h1">CHỈ TỪ 200.000Đ</h6>
+					{!!$setting->main_text!!}
 				</div>
 			</div>
+            @endif
 		</div>
 	</header>
-	<section class="featured mb50">
-		<div class="container">
-			<div class="flex-between flex-wrap-mobile">
-				<div class="block">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s400x500/uploads/images/c7c45d4f-0869-49db-9dfc-3dda9d9e3b30.jpg"
-							alt="">
-					</div>
-					<div class="content pos-bot-right">
-						<h2 class="heading with-underline">MŨ LEN</h2>
-						<h2 class="subheading">HÀNG HOT 2016</h2>
-					</div>
-				</div>
-				<div class="block flex-between flex-column auto-at-mobile">
-					<div class="sub block">
-						<div class="thumb">
-							<img src="https://static.ladipage.net/s400x300/uploads/images/9cc130b6-22f0-49a9-8950-547ca9a4ae10.jpg"
-								alt="">
-						</div>
-						<div class="content pos-center">
-							<h2 class="heading">ÁO KHOÁC</h2>
-							<h2 class="subheading with-topline">SALE TỚI 30%</h2>
-						</div>
-					</div>
-					<div class="sub block">
-						<div class="thumb">
-							<img src="https://static.ladipage.net/s400x300/uploads/images/4f6c37f8-6371-453d-9c0a-c765f30f6a17.jpg"
-								alt="">
-						</div>
-						<div class="content pos-center">
-							<h2 class="heading">ÁO THUN</h2>
-							<h2 class="subheading with-topline">SALE TỚI 30%</h2>
-						</div>
-					</div>
-				</div>
-				<div class="block">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s400x500/uploads/images/1b483591-555d-48f1-9fad-47a40b95a241.jpg"
-							alt="">
-					</div>
-					<div class="content pos-bot-left">
-						<h2 class="heading with-underline">ÁO DA CAO CẤP</h2>
-						<h2 class="subheading">SALE TỚI 30%</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="product-grid new-product mb50">
-		<div class="container">
-			<div class="title">
-				<h1 class="heading">SẢN PHẨM MỚI</h1>
-				<h3 class="subheading">Các mẫu sản phẩm mới nhất trong bộ sưu tập thu - đông năm nay</h3>
-			</div>
-			<div class="content flex-between">
-				<div class="grid-item">
-					<div class="thumb" data-label="10%">
-						<img src="https://static.ladipage.net/s400x500/uploads/images/5d81d6e7-070a-4e06-8188-e5cec04eb11c.jpg"
-							alt="">
-					</div>
-					<div class="title">Áo khoác da cao cấp 2016</div>
-					<div class="info">
-						<div class="price"><b>1.000.000đ</b></div>
-						<div class="rating">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb" data-label="30%">
-						<img src="https://static.ladipage.net/s400x500/uploads/images/2da5a361-acb8-49e4-be72-1096bdaeadac.jpg"
-							alt="">
-					</div>
-					<div class="title">Áo khoác da cao cấp 2016</div>
-					<div class="info">
-						<div class="price"><b>1.000.000đ</b></div>
-						<div class="rating">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb" data-label="20%">
-						<img src="https://static.ladipage.net/s400x500/uploads/images/d510cf53-6071-4364-89d8-709f5dd29a64.jpeg"
-							alt="">
-					</div>
-					<div class="title">Áo khoác da cao cấp 2016</div>
-					<div class="info">
-						<div class="price"><b>1.000.000đ</b></div>
-						<div class="rating">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb" data-label="10%">
-						<img src="https://static.ladipage.net/s400x500/uploads/images/a368b735-97f8-40c7-b810-86441aabd89e.jpg"
-							alt="">
-					</div>
-					<div class="title">Áo khoác da cao cấp 2016</div>
-					<div class="info">
-						<div class="price"><b>1.000.000đ</b></div>
-						<div class="rating">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-								width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,214,0,1)">
-								<path
-									d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
-								</path>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
+    @include('frontend.partial.featured-collections')
+    @include('frontend.partial.featured-products')
 	<section class="something-strong mb50">
 		<div class="container">
 			<div class="content flex-between">
@@ -488,48 +295,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="partner">
-		<div class="container">
-			<div class="content flex-between">
-				<div class="grid-item">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s300x200/uploads/images/fe07350c-bdc9-4f1e-8da4-61428b91d1df.png"
-							alt="">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s300x200/uploads/images/dbf69ec8-81b8-4b66-9827-c44746a66744.png"
-							alt="">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s200x200/uploads/images/61d5024e-7f28-4756-b1c9-106d053481be.png"
-							alt="">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s300x200/uploads/images/73c29fb3-dca5-4402-bb50-8b2cb20531cb.png"
-							alt="">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s300x200/uploads/images/2b58ed15-a61a-4b0b-acb0-50c0a8518a9b.png"
-							alt="">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="thumb">
-						<img src="https://static.ladipage.net/s300x200/uploads/images/89773f7d-64f7-41e1-8a55-c4904da44bc3.png"
-							alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    @include('frontend.partial.partners')
+	
 	<section class="contact mb50">
 		<div class="container">
 			<div class="content flex-between">
@@ -547,7 +314,7 @@
 									<path
 										d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z">
 									</path>
-								</svg></span>1-123-456-7890</div>
+								</svg></span>{{$setting->phone}}</div>
 
 					</div>
 					<div class="action">

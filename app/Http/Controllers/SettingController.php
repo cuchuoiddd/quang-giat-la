@@ -50,8 +50,8 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $rules = array(
-            'logo' => 'mimes:jpeg,jpg,png,gif|required|max:2048',
-            'banner' => 'mimes:jpeg,jpg,png,gif|required|max:2048'
+            'logo' => 'mimes:jpeg,jpg,png,gif|max:2048',
+            'footer_logo' => 'mimes:jpeg,jpg,png,gif|max:2048'
           );
         // $validator = Validator::make($fileArray, $rules);
         $validator = Validator::make($request->all(), $rules);
@@ -66,12 +66,12 @@ class SettingController extends Controller
             }
             $data['logo'] = $this->fileUpload->uploadImage(Directory::UPLOAD_LOGO,$request->logo);
         }
-        if ($request->hasFile('banner')) {
+        if ($request->hasFile('footer_logo')) {
             if ($validator->fails()){
                 $message = 'File không hợp lệ';
                 return redirect()->back()->with('success', $message);
             }
-            $data['banner'] = $this->fileUpload->uploadImage(Directory::UPLOAD_BANNER,$request->banner);
+            $data['footer_logo'] = $this->fileUpload->uploadImage(Directory::UPLOAD_FOOTER_LOGO,$request->footer_logo);
         }
         $setting->create($data);
         return redirect('admin/settings');
@@ -113,7 +113,7 @@ class SettingController extends Controller
     {
         $rules = array(
             'logo' => 'mimes:jpeg,jpg,png,gif|max:2048',
-            'banner' => 'mimes:jpeg,jpg,png,gif|max:2048'
+            'footer_logo' => 'mimes:jpeg,jpg,png,gif|max:2048'
           );
         // $validator = Validator::make($fileArray, $rules);
         $validator = Validator::make($request->all(), $rules);
@@ -121,7 +121,7 @@ class SettingController extends Controller
 
         $setting = Setting::find($id);
         $logo_old = $setting->logo;
-        $banner_old = $setting->banner;
+        $footer_logo_old = $setting->footer_logo;
         $data = $request->all();
         if ($validator->fails()){
             $message = 'File không hợp lệ';
@@ -130,16 +130,16 @@ class SettingController extends Controller
             if ($request->hasFile('logo')) {
                 $data['logo'] = $this->fileUpload->uploadImage(Directory::UPLOAD_LOGO,$request->logo);
             }
-            if ($request->hasFile('banner')) {
-                $data['banner'] = $this->fileUpload->uploadImage(Directory::UPLOAD_BANNER,$request->banner);
+            if ($request->hasFile('footer_logo')) {
+                $data['footer_logo'] = $this->fileUpload->uploadImage(Directory::UPLOAD_FOOTER_LOGO,$request->footer_logo);
             }
         }
         $setting->update($data);
         if($request->hasFile('logo')){
             $this->fileUpload->removeImage($logo_old);
         }
-        if($request->hasFile('banner')){
-            $this->fileUpload->removeImage($banner_old);
+        if($request->hasFile('footer_logo')){
+            $this->fileUpload->removeImage($footer_logo_old);
         }
         return redirect('admin/settings');
     }

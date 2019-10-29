@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model
 {
-    protected $table = 'setting';
-    protected $fillable = ['logo','alt_logo','banner','alt_banner','title','phone','hotline','fanpage','follow_us_at','limit_product','copy_right','caption_gallery_box','url_gallery_box'];
+    protected $table = 'settings';
+    protected $fillable = ['logo','alt_logo','footer_logo','alt_footer_logo','title','phone','main_text','address','copy_right','facebook', 'twitter', 'instagram', 'youtube'];
 }
