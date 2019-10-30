@@ -77,6 +77,14 @@ class Helper
     {
         return Product::where('isFeatured',1)->take($num)->orderBy('created_at','desc')->get();
     }
+    public static function getFeaturedCollections($num = 4)
+    {
+        return Category::where('isFeatured',1)->take($num)->orderBy('created_at','desc')->get();
+    }
+    public static function getPartners($num = 4)
+    {
+        return Gallery::take($num)->orderBy('position')->orderBy('created_at','desc')->get();
+    }
     public static function getGalleries()
     {
         return Gallery::orderBy('position')->get();

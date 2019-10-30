@@ -64,7 +64,7 @@ class GalleryController extends Controller
             $data['image'] = $this->fileUpload->uploadImage(Directory::UPLOAD_GALLERY,$request->image);
         }
         $gallery->create($data);
-        return redirect('admin/galleries');
+        return redirect('admin/brands');
     }
 
     /**
@@ -125,7 +125,7 @@ class GalleryController extends Controller
         if($request->hasFile('image')){
             $this->fileUpload->removeImage($image_old);
         }
-        return redirect('admin/galleries');
+        return redirect('admin/brands');
     }
 
     /**
@@ -139,7 +139,7 @@ class GalleryController extends Controller
         $gallery = Gallery::find($id);
         $this->fileUpload->removeImage($gallery->image);
         $gallery->delete();
-        return redirect('admin/galleries');
+        return redirect('admin/brands');
     }
 
     public function ajaxUpdate(Request $request, $id){

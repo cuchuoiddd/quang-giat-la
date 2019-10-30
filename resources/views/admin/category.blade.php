@@ -105,25 +105,31 @@
                                 </div>
                             </div> --}}
                             <div class="form-group col-md-6">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Hiển thị trên trang chủ</label>
+                                <div class="col-sm-10">
+                                    <input type="checkbox" name="isFeatured" {{(isset($category) && isset($category->isFeatured) && $category->isFeatured) ?  'checked' : ''}} value=1>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 hidden">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Type</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="inputPassword3" name="type">
+                                    <!-- <select class="form-control" id="inputPassword3" name="type">
                                         <option value=0 {{isset($category) && $category->type == 0 ? 'selected' : ''}}>
                                             Bài viết</option>
                                         <option value=1 {{isset($category) && $category->type == 1 ? 'selected' : ''}}>
                                             Sản phẩm</option>
-                                    </select>
+                                    </select> -->
+                                    <input type="hidden" name="type" value=1>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="images" class="control-label col-sm-2"><span>Ảnh</span></label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="image form-control" id="image" name="image">
+                                    <img style="max-width:150px" src="{{isset($category) && isset($category->image) ? url($category->image) : ''}}" />
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword3" class="col-sm-2 control-label">Upload Image</label>
-                                <div class="col-sm-10">
-                                    <input type="file" name="image">
-                                </div>
-                            </div>
-                        </div> --}}
 
                         @if (session('success'))
                         <div class="alert alert-danger">
@@ -131,23 +137,11 @@
                             <p>{{ session('success') }}</p>
                         </div>
                         @endif
-
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label class="col-md-1 col-sm-2 control-label">Nội dung</label>
-                                <div class="col-md-11 col-sm-10 editor-category">
-                                    <textarea id="editor1" name="content" rows="10" cols="80" class="editor">
-                                        {{isset($category) && $category->content ? $category->content : ''}}
-                                    </textarea>
-                                </div>
-                                <!-- /.col-->
-                            </div>
-                        </div>
                     </div>
 
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <a href="{{url('admin/category')}}"><button class="btn btn-default">Hủy bỏ</button></a>
+                        <a href="{{url('admin/category/products')}}"><button type="button" class="btn btn-default">Hủy bỏ</button></a>
                         <button type="submit" class="btn btn-info pull-right">Lưu lại</button>
                     </div>
                     <!-- /.box-footer -->

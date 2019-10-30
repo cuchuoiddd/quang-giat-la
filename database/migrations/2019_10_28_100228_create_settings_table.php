@@ -15,12 +15,19 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title')->nullable();
             $table->string('logo')->nullable();
-            $table->string('banner')->nullable();
-            $table->string('text1_header')->nullable();
-            $table->string('text2_header')->nullable();
-            $table->string('text3_header')->nullable();
+            $table->string('alt_logo')->nullable();
+            $table->string('main_text')->nullable();
             $table->string('phone')->nullable();
+            $table->string('footer_logo')->nullable();
+            $table->string('alt_footer_logo')->nullable();
+            $table->string('address')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('copy_right')->nullable();
             $table->timestamps();
         });
     }

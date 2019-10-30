@@ -35,26 +35,26 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="sku" class="control-label">SKU</label>
 
                         <div class="">
                             <input type="text" class="form-control" id="sku" name="sku" placeholder="SKU"
                                 value="{{isset($product) ? $product->sku : ''}}">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="the_tich" class="control-label">Thể tích</label>
-                        <div class="">
-                            <input type="text" class="form-control" id="the_tich" name="the_tich" placeholder="Thể tích"
-                                value="{{isset($product) ? $product->the_tich : ''}}">
-                        </div>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="price" class="control-label">Giá</label>
                         <div class="">
                             <input type="number" class="form-control" id="price" name="price" placeholder="Giá"
                                 value="{{isset($product) ? $product->price : ''}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="discount_percent" class="control-label">Giảm giá (%)</label>
+                        <div class="">
+                            <input type="text" class="form-control" id="discount_percent" name="discount_percent" placeholder="Giảm giá (%)"
+                                value="{{isset($product) ? $product->discount_percent : ''}}">
                         </div>
                     </div>
                 </div>

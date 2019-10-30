@@ -32,59 +32,6 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="limit_product" class="col-sm-2 control-label">Limit product home</label>
-
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="limit_product" placeholder=""
-                                        name="limit_product" value="{{ $isAdd ? 8 : $setting->limit_product }}">
-                                </div>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword3" class="col-sm-2 control-label">Menu Logo</label>
-                                <div class="col-sm-10">
-                                    <input type="file" name="logo">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword" class="col-sm-2 control-label">Banner</label>
-                                <div class="col-sm-10">
-                                    <input type="file" name="banner">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="alt_logo" class="col-sm-2 control-label">Alt Menu logo</label>
-
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="alt_logo" placeholder="alt logo"
-                                        name="alt_logo" value="{{ $isAdd ? '' : $setting->alt_logo }}">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="alt_banner" class="col-sm-2 control-label">Alt banner</label>
-
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="alt_banner" placeholder="alt banner"
-                                        name="alt_banner" value="{{ $isAdd ? '' : $setting->alt_banner }}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="hotline" class="col-sm-2 control-label">Hotline</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="hotline" placeholder="Hotline"
-                                        name="hotline" value="{{ $isAdd ? '' : $setting->hotline }}">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
                                 <label for="phone" class="col-sm-2 control-label">Phone</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="phone" placeholder="Phone"
@@ -92,39 +39,88 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="caption_gallery_box" class="col-sm-2 control-label">Caption Gallery Box</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="caption_gallery_box" placeholder=""
-                                            name="caption_gallery_box" value="{{ $isAdd ? '' : $setting->caption_gallery_box }}">
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                        <label for="url_gallery_box" class="col-sm-2 control-label">URL Gallery Box</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="url_gallery_box" placeholder=""
-                                                name="url_gallery_box" value="{{ $isAdd ? '' : $setting->url_gallery_box }}">
-                                        </div>
-                                    </div>
+                        
+                        <div class="form-group col-sm-11">
+                            <label for="main_text" class="col-sm-2 control-label">Main text</label>
+
+                            <div class="col-sm-10">
+                                <textarea id='content' class="editor" rows="10" name="main_text">
+                                {{isset($setting) ? $setting->main_text: ''}}
+                                </textarea>
                             </div>
+                        </div>
+                        
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="follow_us_at" class="col-sm-2 control-label">Follow us at</label>
+                                <label for="logo" class="col-sm-2 control-label">Logo</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="follow_us_at" placeholder=""
-                                        name="follow_us_at" value="{{ $isAdd ? '' : $setting->follow_us_at }}">
+                                    <input type="file" id="logo" name="logo">
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                    <label for="fanpage" class="col-sm-2 control-label">Facebook Fanpage</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="fanpage" placeholder=""
-                                            name="fanpage" value="{{ $isAdd ? '' : $setting->fanpage }}">
-                                    </div>
+                                <label for="footer_logo" class="col-sm-2 control-label">Footer Logo</label>
+                                <div class="col-sm-10">
+                                    <input type="file" id="footer_logo" name="footer_logo">
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="alt_logo" class="col-sm-2 control-label">Alt logo</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="alt_logo" placeholder="alt logo"
+                                        name="alt_logo" value="{{ $isAdd ? '' : $setting->alt_logo }}">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="alt_footer_logo" class="col-sm-2 control-label">Alt Footer logo</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="alt_footer_logo" placeholder="alt banner"
+                                        name="alt_footer_logo" value="{{ $isAdd ? '' : $setting->alt_footer_logo }}">
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="facebook" class="col-sm-2 control-label">Facebook</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="facebook" placeholder=""
+                                        name="facebook" value="{{ $isAdd ? '' : $setting->facebook }}">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="twitter" class="col-sm-2 control-label">Twitter</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="twitter" placeholder=""
+                                        name="twitter" value="{{ $isAdd ? '' : $setting->twitter }}">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="instagram" class="col-sm-2 control-label">Instagram</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="instagram" placeholder=""
+                                        name="instagram" value="{{ $isAdd ? '' : $setting->instagram }}">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="youtube" class="col-sm-2 control-label">Youtube</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="youtube" placeholder=""
+                                        name="youtube" value="{{ $isAdd ? '' : $setting->youtube }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="address" class="col-sm-2 control-label">Address</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="address" placeholder=""
+                                        name="address" value="{{ $isAdd ? '' : $setting->address }}">
+                                </div>
+                            </div>
                             <div class="form-group col-md-6">
                                 <label for="copy_right" class="col-sm-2 control-label">Copyright</label>
                                 <div class="col-sm-10">
@@ -132,7 +128,31 @@
                                         name="copy_right" value="{{ $isAdd ? '' : $setting->copy_right }}">
                                 </div>
                             </div>
-                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="android_link" class="col-sm-2 control-label">Android icon link</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="android_link" placeholder=""
+                                        name="android_link" value="{{ $isAdd ? '' : $setting->android_link }}">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ios_link" class="col-sm-2 control-label">IOS icon link</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="ios_link" placeholder=""
+                                        name="ios_link" value="{{ $isAdd ? '' : $setting->ios_link }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="custom_js" class="col-sm-2 control-label">Custom HTML (Footer)</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control" id="custom_js" placeholder=""
+                                        name="custom_js">{{ $isAdd ? '' : $setting->custom_js }}</textarea>
+                                </div>
+                            </div>
                         </div>
 
 

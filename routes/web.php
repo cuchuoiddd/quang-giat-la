@@ -37,12 +37,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     // Route::resource('pages', 'PageController');
     Route::resource('articles', 'ArticleController');
-    // Route::resource('products', 'ProductController');
+    Route::resource('products', 'ProductController');
     // Route::resource('menus', 'MenuController');
 
-    // Route::resource('settings', 'SettingController');
+    Route::resource('settings', 'SettingController');
     // Route::get('slides/{id}/ajax-update','SlideController@ajaxUpdate');
     // Route::resource('slides', 'SlideController');
-    // Route::get('galleries/{id}/ajax-update','GalleryController@ajaxUpdate');
-    // Route::resource('galleries', 'GalleryController');
+    Route::get('brands/{id}/ajax-update','GalleryController@ajaxUpdate');
+    Route::resource('brands', 'GalleryController');
 });

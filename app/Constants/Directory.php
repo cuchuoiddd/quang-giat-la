@@ -38,6 +38,11 @@ class Directory
     /**
      * @var string
      */
+    const UPLOAD_FOOTER_LOGO = '/images/footer_logo/';
+
+    /**
+     * @var string
+     */
     const UPLOAD_SLIDE = '/images/slide/';
 
     /**

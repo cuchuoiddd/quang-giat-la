@@ -4,8 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use Illuminate\Support\Facades\Validator;
+use App\Services\UploadService;
+use App\Constants\Directory;
+
 class CategoryController extends Controller
 {
+    private $fileUpload;
+    public function __construct(UploadService $fileUpload)
+    {
+        $this->fileUpload = $fileUpload;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -40,6 +49,23 @@ class CategoryController extends Controller
     {
         $data = $request->all();
         $type = $request->input('type') == 0 ? "articles" : "products";
+
+        $rules = array(
+            'image' => 'mimes:jpeg,jpg,png,gif|required|max:2048'
+          );
+        // $validator = Validator::make($fileArray, $rules);
+        $validator = Validator::make($request->all(), $rules);
+        // Check to see if validation fails or passe
+
+        if ($request->hasFile('image')) {
+            if ($validator->fails()){
+                $message = 'File không hợp lệ';
+                return redirect()->back()->with('success', $message);
+            }
+
+            $data['image'] = $this->fileUpload->uploadImage(Directory::UPLOAD_SLIDE,$request->image);
+        }
+        $data['isFeatured'] = $request->has('isFeatured') ? 1 : 0;
         $category = Category::create($data);
         if($category){
             return redirect('admin/category/'.$type);
@@ -94,6 +120,24 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $data = $request->all();
         $type = $request->input('type') == 0 ? "articles" : "products";
+
+        $rules = array(
+            'image' => 'mimes:jpeg,jpg,png,gif|required|max:2048'
+          );
+        // $validator = Validator::make($fileArray, $rules);
+        $validator = Validator::make($request->all(), $rules);
+        // Check to see if validation fails or passe
+
+        if ($request->hasFile('image')) {
+            if ($validator->fails()){
+                $message = 'File không hợp lệ';
+                return redirect()->back()->with('success', $message);
+            }
+
+            $data['image'] = $this->fileUpload->uploadImage(Directory::UPLOAD_SLIDE,$request->image);
+        }
+
+        $data['isFeatured'] = $request->has('isFeatured') ? 1 : 0;
         $category->update($data);
         if($category){
             return redirect('admin/category/'.$type);
