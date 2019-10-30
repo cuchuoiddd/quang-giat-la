@@ -5,3 +5,122 @@
 .header-top .spot-light-box .inner-box{
     color: #FFF;
 }
+.icon-header a{
+    color : #FFF;
+}
+.footer #chat-social {
+    box-sizing: border-box;
+    -webkit-font-smoothing: auto!important;
+    margin-top: -25px;
+    /* top: 50%; */
+    right: 15px;
+    position: fixed!important;
+    z-index: 99800;
+    /* margin-top: 116px; */
+    overflow: visible!important;
+    -webkit-transition: .3s;
+    transition: .3s;
+    right: 19px;
+    bottom: 14px;
+}
+#chat-social .widget-tooltip {
+    /*margin-bottom: 5px;*/
+    margin-bottom: 1px;
+    padding: 0 3px;
+    position: relative;
+}
+#chat-social .widget-tooltip a {
+    width: 45pt;
+    /* padding: 18px; */
+    background-repeat: no-repeat;
+    height: 45pt;
+    line-height: 49px;
+    display: inline-block!important;
+    border: none!important;
+    font-size: 18px!important;
+    color: #fff!important;
+    text-align: center!important;
+    position: relative;
+    border-radius: 50%!important;
+    cursor: pointer!important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.11);
+    background-size: cover;
+}
+#chat-social .widget-tooltip .autoAdsMaxLead_button_tap {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    border-radius: 100%!important;
+    background-color: rgba(255,255,255,.6);
+}
+#chat-social .widget-tooltip .widget-tooltiptext {
+visibility: hidden;
+    text-align: center;
+    border-radius: 5px!important;
+    white-space: nowrap!important;
+    width: auto!important;
+    height: 35px!important;
+    line-height: 25px!important;
+    padding: 5px 10px!important;
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    font-size: 12px!important;
+    font-family: 'IBM Plex Sans',sans-serif;
+    right: 112%;
+    color: #fff;
+}
+#chat-social .widget-tooltip .widget-tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(29, 36, 62, 0.7) transparent transparent!important;
+    left: 100%;
+    transform: rotateZ(-180deg);
+}
+#chat-social .facebook-messager-gv88:hover #widget-btn-facebook .widget-tooltiptext,
+#chat-social .zalo-group-gv88:hover #widget-btn-zalo .widget-tooltiptext,
+#chat-social .question-popup-gv88:hover #widget-btn-contact_form .widget-tooltiptext,
+#chat-social .tawk-to-gv88:hover #widget-btn-tawk_to .widget-tooltiptext {
+    visibility: visible;
+}
+#chat-social .facebook-messager-gv88 a {
+    background-image: url(https://cdn.autoads.asia/content/images/widget_icon_messenger.svg)!important;
+    background-color: #0084ff!important;
+    z-index: 9999;
+    z-index: 9999;
+    width: 58px;
+    /*height: 58px;*/
+    height: 50px;
+    right: 1px;
+    margin-bottom: -1px;
+    margin-top: 2px;
+    opacity: 0;
+}
+#chat-social .zalo-group-gv88 a {
+    background-image: url(https://cdn.autoads.asia/content/images/widget_icon_zalo.svg)!important;
+    background-color: #0068ff!important;
+}
+#chat-social .question-popup-gv88 a {
+        margin-bottom: 7px;
+
+    background-image: url(https://cdn.autoads.asia/content/images/widget_icon_contact_form.svg)!important;
+    background-color: #f7a400!important;
+}
+#chat-social .tawk-to-gv88 a {
+    background-image: url(https://cdn.autoads.asia/content/images/widget_icon_tawkto.svg)!important;
+    background-color: #03a84e!important;
+    opacity: 0;
+}

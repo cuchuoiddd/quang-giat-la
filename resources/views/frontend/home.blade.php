@@ -57,6 +57,16 @@
                             <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)"> <path d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z"></path> </svg>
                             </a>
                         </li>
+						<li class="icon-header">
+                            <a target="_blank" href="{{$setting->android_link}}">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" class="svg-inline--fa fa-google-play fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg>
+                            </a>
+                        </li>
+                        <li class="icon-header">
+                            <a target="_blank" href="{{$setting->ios_link}}">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="app-store" class="svg-inline--fa fa-app-store fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M255.9 120.9l9.1-15.7c5.6-9.8 18.1-13.1 27.9-7.5 9.8 5.6 13.1 18.1 7.5 27.9l-87.5 151.5h63.3c20.5 0 32 24.1 23.1 40.8H113.8c-11.3 0-20.4-9.1-20.4-20.4 0-11.3 9.1-20.4 20.4-20.4h52l66.6-115.4-20.8-36.1c-5.6-9.8-2.3-22.2 7.5-27.9 9.8-5.6 22.2-2.3 27.9 7.5l8.9 15.7zm-78.7 218l-19.6 34c-5.6 9.8-18.1 13.1-27.9 7.5-9.8-5.6-13.1-18.1-7.5-27.9l14.6-25.2c16.4-5.1 29.8-1.2 40.4 11.6zm168.9-61.7h53.1c11.3 0 20.4 9.1 20.4 20.4 0 11.3-9.1 20.4-20.4 20.4h-29.5l19.9 34.5c5.6 9.8 2.3 22.2-7.5 27.9-9.8 5.6-22.2 2.3-27.9-7.5-33.5-58.1-58.7-101.6-75.4-130.6-17.1-29.5-4.9-59.1 7.2-69.1 13.4 23 33.4 57.7 60.1 104zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216z"></path></svg>
+                            </a>
+                        </li>
 					</ul>
 				</div>
 			</nav>
@@ -328,6 +338,79 @@
 		<div class="container">
 
 		</div>
+        <div id="chat-social">
+            <div class="chat-item">
+                <div class="zalo-group-gv88 hidden-xs">
+                    <div id="widget-btn-zalo" class="widget-btn-float-container widget-tooltip">
+                        <a target="_blank" href="https://zalo.me/0972542111" class="widget-btn-float zalo-color widget-menu-zalo">
+                            <span class="button_tap"></span>
+                        </a>
+                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat với chúng tôi qua Zalo
+                        </div>
+                    </div>
+                </div>
+                <div class="question-popup-gv88 hidden-xs">
+                    <div id="widget-btn-contact_form" class="widget-btn-float-container widget-tooltip">
+                        <a href="javascript:void(0);" id="chat-feedback-customer" class="widget-menu-contact-form">
+                            <span class="button_tap active"></span>
+                        </a>
+                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Để lại lời nhắn cho chúng tôi
+                        </div>
+                    </div>
+                </div>
+                <div class="facebook-messager-gv88 hidden-xs">
+                    <div id="widget-btn-facebook" class="widget-btn-float-container widget-tooltip">
+                        <a href="javascript:void(0);" class="widget-menu-facebook">
+                            <span class="button_tap"></span></a>
+                        <!-- Load Facebook SDK for JavaScript -->
+                        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f270616512ede2c&amp;origin=https%3A%2F%2Fgiupviec88.yez.vn" style="border: none;"></iframe></div><div></div></div><div class="fb-customerchat fb_invisible_flow fb_iframe_widget" attribution="setup_tool" page_id="1434986156636938" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;attribution=setup_tool&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey"><span style="vertical-align: bottom; width: 1000px; height: 0px;"><iframe name="f2af14306e5813" width="1000px" height="1000px" title="" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v4.0/plugins/customerchat.php?app_id=&amp;attribution=setup_tool&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df9ccd9d6eaea68%26domain%3Dgiupviec88.yez.vn%26origin%3Dhttps%253A%252F%252Fgiupviec88.yez.vn%252Ff270616512ede2c%26relation%3Dparent.parent&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey" style="border: none; visibility: visible; width: 288pt; height: 211px; border-radius: 9pt; bottom: 63pt; padding: 0px; position: fixed; right: 9pt; top: auto; z-index: 2147483647; max-height: 0px;" class="" data-testid="dialog_iframe"></iframe></span></div><div class="fb-customerchat fb_invisible_flow fb_iframe_widget" attribution="setup_tool" page_id="1434986156636938" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;attribution=setup_tool&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey"><span style="vertical-align: bottom; width: 1000px; height: 0px;"><iframe name="f51d250d54009c" width="1000px" height="1000px" title="" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v4.0/plugins/customerchat.php?app_id=&amp;attribution=setup_tool&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df29466794f7d9a%26domain%3Dgiupviec88.yez.vn%26origin%3Dhttps%253A%252F%252Fgiupviec88.yez.vn%252Ff270616512ede2c%26relation%3Dparent.parent&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey" style="border: none; visibility: visible; width: 288pt; height: 211px; border-radius: 9pt; bottom: 63pt; padding: 0px; position: fixed; right: 9pt; top: auto; z-index: 2147483647; max-height: 0px;" class=" fb_customer_chat_bounce_out_v2" data-testid="dialog_iframe"></iframe></span></div><div class="fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge" style="background: none; border-radius: 50%; bottom: 18pt; display: none; height: 45pt; padding: 0px; position: fixed; right: 18pt; top: auto; width: 45pt; z-index: 2147483646;"><div class="fb_dialog_content" style="background: none;"><iframe name="blank_f2af14306e5813" width="60px" tabindex="-1" data-testid="bubble_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v4.0/plugins/customer_chat/bubble" style="border: none;"></iframe></div></div><div class="fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in" style="background: none; border-radius: 50%; bottom: 18pt; display: inline; height: 45pt; padding: 0px; position: fixed; right: 18pt; top: auto; width: 45pt; z-index: 2147483646;"><div class="fb_dialog_content" style="background: none;"><iframe name="blank_f51d250d54009c" width="60px" tabindex="-1" data-testid="bubble_iframe" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v4.0/plugins/customer_chat/bubble" style="border: none;"></iframe></div></div></div>
+                        <script>
+                            window.fbAsyncInit = function() {
+                            FB.init({
+                                xfbml            : true,
+                                version          : 'v4.0'
+                            });
+                            };
+
+                            (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+
+                        <!-- Your customer chat code -->
+                        
+                        <!-- Your customer chat code -->
+                        
+                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat ngay để nhận tư vấn</div>
+                    </div>
+                </div>
+                <div class="tawk-to-gv88">
+                    <div id="widget-btn-tawk_to" class="widget-btn-float-container widget-tooltip">
+                        <a href="javascript:void(0);" class="widget-menu-tawk-to" data-action="widget_current_channel = 'tawk_to'; penTawkToPopup();">
+                            <span class="button_tap"></span>
+                        </a>
+                        <!--Start of Tawk.to Script-->
+                        <script type="text/javascript">
+                        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                        (function(){
+                        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                        s1.async=true;
+                        s1.src='https://embed.tawk.to/5da97f5b78ab74187a5a4479/default';
+                        s1.charset='UTF-8';
+                        s1.setAttribute('crossorigin','*');
+                        s0.parentNode.insertBefore(s1,s0);
+                        })();
+                        </script>
+                        <!--End of Tawk.to Script-->
+                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat trực tiếp cho chúng tôi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</footer>
 
 	<!-- Optional JavaScript -->
@@ -341,6 +424,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
+    {!!$setting->custom_js!!}
 </body>
 
 </html>

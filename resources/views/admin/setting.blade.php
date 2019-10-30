@@ -129,6 +129,31 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="android_link" class="col-sm-2 control-label">Android icon link</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="android_link" placeholder=""
+                                        name="android_link" value="{{ $isAdd ? '' : $setting->android_link }}">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ios_link" class="col-sm-2 control-label">IOS icon link</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="ios_link" placeholder=""
+                                        name="ios_link" value="{{ $isAdd ? '' : $setting->ios_link }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="custom_js" class="col-sm-2 control-label">Custom HTML (Footer)</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="form-control" id="custom_js" placeholder=""
+                                        name="custom_js">{{ $isAdd ? '' : $setting->custom_js }}</textarea>
+                                </div>
+                            </div>
+                        </div>
 
 
                         @if (session('success'))
