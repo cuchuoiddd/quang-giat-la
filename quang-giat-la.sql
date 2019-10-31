@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2019 at 01:09 AM
+-- Generation Time: Oct 31, 2019 at 07:34 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -126,7 +126,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (118, '2019_06_16_162522_create_products_table', 2),
 (119, '2019_08_22_150746_create_table_galleries', 2),
 (120, '2019_10_28_100228_create_settings_table', 2),
-(121, '2019_10_28_100951_create_services_table', 2);
+(121, '2019_10_28_100951_create_services_table', 2),
+(123, '2019_10_30_140313_alter_table_settings_add_columns', 3),
+(124, '2019_10_31_153155_alter_settings_add_column', 4),
+(125, '2019_10_31_165119_alter_settings_add_column', 5);
 
 -- --------------------------------------------------------
 
@@ -173,7 +176,11 @@ INSERT INTO `products` (`id`, `sku`, `title`, `slug`, `price`, `discount_percent
 (1, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 10, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/vgDmn898GKfrow0uqDUaNhtSpj1nGn3SvvuAyfXV.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:04:53', '2019-10-29 06:04:53'),
 (2, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 20, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/gsX6i9e3HqEg09TBUMSZLGamOCUBE0CKgZczuKRs.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:05:29', '2019-10-29 06:05:37'),
 (3, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 30, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/FpdrTW3Ll5DL9phDN8igMPIpPoTKI3mjIZ7mk8mx.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:06:09', '2019-10-29 06:06:57'),
-(4, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 20, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/PUwaYnh7TLgTc9kFniH0rzxgLMRNKuvKDZRyi0o7.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:06:30', '2019-10-29 06:06:30');
+(4, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 20, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/PUwaYnh7TLgTc9kFniH0rzxgLMRNKuvKDZRyi0o7.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:06:30', '2019-10-29 06:06:30'),
+(5, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 10, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/vgDmn898GKfrow0uqDUaNhtSpj1nGn3SvvuAyfXV.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:04:53', '2019-10-29 06:04:53'),
+(6, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 20, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/gsX6i9e3HqEg09TBUMSZLGamOCUBE0CKgZczuKRs.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:05:29', '2019-10-29 06:05:37'),
+(7, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 30, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/FpdrTW3Ll5DL9phDN8igMPIpPoTKI3mjIZ7mk8mx.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:06:09', '2019-10-29 06:06:57'),
+(8, NULL, 'Áo khoác da cao cấp 2016', 'ao-khoac-da-cao-cap-2016', 1000000, 20, NULL, NULL, NULL, '[{\"position\":0,\"url\":\"\\/images\\/product\\/PUwaYnh7TLgTc9kFniH0rzxgLMRNKuvKDZRyi0o7.jpeg\",\"alt\":\"\"}]', NULL, NULL, 1, 1, '2019-10-29 06:06:30', '2019-10-29 06:06:30');
 
 -- --------------------------------------------------------
 
@@ -210,12 +217,35 @@ CREATE TABLE `settings` (
   `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `footer_logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alt_footer_logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `limit_block_products` text COLLATE utf8mb4_unicode_ci,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `twitter` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `instagram` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `youtube` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `copy_right` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `custom_js` text COLLATE utf8mb4_unicode_ci,
+  `android_link` text COLLATE utf8mb4_unicode_ci,
+  `ios_link` text COLLATE utf8mb4_unicode_ci,
+  `zalo_link` text COLLATE utf8mb4_unicode_ci,
+  `tawk_to_widget_code` text COLLATE utf8mb4_unicode_ci,
+  `fb_widget_code` text COLLATE utf8mb4_unicode_ci,
+  `feature1_heading` text COLLATE utf8mb4_unicode_ci,
+  `feature1_subheading` text COLLATE utf8mb4_unicode_ci,
+  `feature2_heading` text COLLATE utf8mb4_unicode_ci,
+  `feature2_subheading` text COLLATE utf8mb4_unicode_ci,
+  `feature3_heading` text COLLATE utf8mb4_unicode_ci,
+  `feature3_subheading` text COLLATE utf8mb4_unicode_ci,
+  `feature4_heading` text COLLATE utf8mb4_unicode_ci,
+  `feature4_subheading` text COLLATE utf8mb4_unicode_ci,
+  `banner_image` text COLLATE utf8mb4_unicode_ci,
+  `meta_keyword` text COLLATE utf8mb4_unicode_ci,
+  `meta_description` text COLLATE utf8mb4_unicode_ci,
+  `meta_title` text COLLATE utf8mb4_unicode_ci,
+  `new_product_heading` text COLLATE utf8mb4_unicode_ci,
+  `new_product_subheading` text COLLATE utf8mb4_unicode_ci,
+  `sale_product_heading` text COLLATE utf8mb4_unicode_ci,
+  `sale_product_subheading` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -224,8 +254,8 @@ CREATE TABLE `settings` (
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `title`, `logo`, `alt_logo`, `main_text`, `phone`, `footer_logo`, `alt_footer_logo`, `address`, `facebook`, `twitter`, `instagram`, `youtube`, `copy_right`, `created_at`, `updated_at`) VALUES
-(1, 'Giặt là', '/images/logo/2019-10-28_5db76b976ef9f.png', 'Giặt là 2019', '<p>D&agrave;nh cho ph&aacute;i đẹp</p>\r\n\r\n<h1><strong>THỜI TRANG Đ&Ocirc;NG XU&Acirc;N</strong></h1>\r\n\r\n<p>CHỈ TỪ 200.000Đ</p>', '01679077796', '/images/footer_logo/2019-10-28_5db76b976f55a.png', 'Giặt là mới nhất', 'HN', 'https://laravel.com/docs/5.8/migrations', 'https://laravel.com/docs/5.8/migrations', 'Duc Anh Tran', 'https://laravel.com/docs/5.8/migrations', '©2017 Bản quyền của Masan Consumer', '2019-10-29 05:28:17', '2019-10-29 05:53:18');
+INSERT INTO `settings` (`id`, `title`, `logo`, `alt_logo`, `main_text`, `phone`, `footer_logo`, `alt_footer_logo`, `limit_block_products`, `address`, `facebook`, `twitter`, `instagram`, `youtube`, `copy_right`, `custom_js`, `android_link`, `ios_link`, `zalo_link`, `tawk_to_widget_code`, `fb_widget_code`, `feature1_heading`, `feature1_subheading`, `feature2_heading`, `feature2_subheading`, `feature3_heading`, `feature3_subheading`, `feature4_heading`, `feature4_subheading`, `banner_image`, `meta_keyword`, `meta_description`, `meta_title`, `new_product_heading`, `new_product_subheading`, `sale_product_heading`, `sale_product_subheading`, `created_at`, `updated_at`) VALUES
+(1, 'Giặt là', '/images/logo/2019-10-28_5db76b976ef9f.png', 'Giặt là 2019', '<h2>D&agrave;nh cho ph&aacute;i đẹp</h2>\r\n\r\n<h1><big><strong>THỜI TRANG Đ&Ocirc;NG XU&Acirc;N</strong></big></h1>\r\n\r\n<h3>CHỈ TỪ 200.000Đ</h3>', '01679077796', '/images/footer_logo/2019-10-31_5dbb1f5ad15f9.jpg', 'Giặt là mới nhất', '6', 'HN', 'https://laravel.com/docs/5.8/migrations', 'https://laravel.com/docs/5.8/migrations', 'Duc Anh Tran', 'https://laravel.com/docs/5.8/migrations', '©2017 Bản quyền của Masan Consumer', NULL, 'https://play.google.com/store', 'https://developer.apple.com/support/app-store/', 'https://zalo.me/0972542111', '<!--Start of Tawk.to Script-->\r\n<script type=\"text/javascript\">\r\nvar Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\r\n(function(){\r\nvar s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];\r\ns1.async=true;\r\ns1.src=\'https://embed.tawk.to/5dbaff01e4c2fa4b6bd95f0d/default\';\r\ns1.charset=\'UTF-8\';\r\ns1.setAttribute(\'crossorigin\',\'*\');\r\ns0.parentNode.insertBefore(s1,s0);\r\n})();\r\n</script>\r\n<!--End of Tawk.to Script-->', '<!-- Load Facebook SDK for JavaScript -->\r\n                        <div id=\"fb-root\" class=\" fb_reset\"><div style=\"position: absolute; top: -10000px; width: 0px; height: 0px;\"><div><iframe name=\"fb_xdm_frame_https\" id=\"fb_xdm_frame_https\" aria-hidden=\"true\" title=\"Facebook Cross Domain Communication Frame\" tabindex=\"-1\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" scrolling=\"no\" allow=\"encrypted-media\" src=\"https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f270616512ede2c&amp;origin=https%3A%2F%2Fgiupviec88.yez.vn\" style=\"border: none;\"></iframe></div><div></div></div><div class=\"fb-customerchat fb_invisible_flow fb_iframe_widget\" attribution=\"setup_tool\" page_id=\"1434986156636938\" fb-xfbml-state=\"rendered\" fb-iframe-plugin-query=\"app_id=&amp;attribution=setup_tool&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey\"><span style=\"vertical-align: bottom; width: 1000px; height: 0px;\"><iframe name=\"f2af14306e5813\" width=\"1000px\" height=\"1000px\" title=\"\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" scrolling=\"no\" allow=\"encrypted-media\" src=\"https://www.facebook.com/v4.0/plugins/customerchat.php?app_id=&amp;attribution=setup_tool&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df9ccd9d6eaea68%26domain%3Dgiupviec88.yez.vn%26origin%3Dhttps%253A%252F%252Fgiupviec88.yez.vn%252Ff270616512ede2c%26relation%3Dparent.parent&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey\" style=\"border: none; visibility: visible; width: 288pt; height: 211px; border-radius: 9pt; bottom: 63pt; padding: 0px; position: fixed; right: 9pt; top: auto; z-index: 2147483647; max-height: 0px;\" class=\"\" data-testid=\"dialog_iframe\"></iframe></span></div><div class=\"fb-customerchat fb_invisible_flow fb_iframe_widget\" attribution=\"setup_tool\" page_id=\"1434986156636938\" fb-xfbml-state=\"rendered\" fb-iframe-plugin-query=\"app_id=&amp;attribution=setup_tool&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey\"><span style=\"vertical-align: bottom; width: 1000px; height: 0px;\"><iframe name=\"f51d250d54009c\" width=\"1000px\" height=\"1000px\" title=\"\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" scrolling=\"no\" allow=\"encrypted-media\" src=\"https://www.facebook.com/v4.0/plugins/customerchat.php?app_id=&amp;attribution=setup_tool&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df29466794f7d9a%26domain%3Dgiupviec88.yez.vn%26origin%3Dhttps%253A%252F%252Fgiupviec88.yez.vn%252Ff270616512ede2c%26relation%3Dparent.parent&amp;container_width=0&amp;locale=vi_VN&amp;page_id=1434986156636938&amp;sdk=joey\" style=\"border: none; visibility: visible; width: 288pt; height: 211px; border-radius: 9pt; bottom: 63pt; padding: 0px; position: fixed; right: 9pt; top: auto; z-index: 2147483647; max-height: 0px;\" class=\" fb_customer_chat_bounce_out_v2\" data-testid=\"dialog_iframe\"></iframe></span></div><div class=\"fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge\" style=\"background: none; border-radius: 50%; bottom: 18pt; display: none; height: 45pt; padding: 0px; position: fixed; right: 18pt; top: auto; width: 45pt; z-index: 2147483646;\"><div class=\"fb_dialog_content\" style=\"background: none;\"><iframe name=\"blank_f2af14306e5813\" width=\"60px\" tabindex=\"-1\" data-testid=\"bubble_iframe\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" scrolling=\"no\" allow=\"encrypted-media\" src=\"https://www.facebook.com/v4.0/plugins/customer_chat/bubble\" style=\"border: none;\"></iframe></div></div><div class=\"fb_dialog  fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in\" style=\"background: none; border-radius: 50%; bottom: 18pt; display: inline; height: 45pt; padding: 0px; position: fixed; right: 18pt; top: auto; width: 45pt; z-index: 2147483646;\"><div class=\"fb_dialog_content\" style=\"background: none;\"><iframe name=\"blank_f51d250d54009c\" width=\"60px\" tabindex=\"-1\" data-testid=\"bubble_iframe\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" scrolling=\"no\" allow=\"encrypted-media\" src=\"https://www.facebook.com/v4.0/plugins/customer_chat/bubble\" style=\"border: none;\"></iframe></div></div></div>\r\n                        <script>\r\n                            window.fbAsyncInit = function() {\r\n                            FB.init({\r\n                                xfbml            : true,\r\n                                version          : \'v4.0\'\r\n                            });\r\n                            };\r\n\r\n                            (function(d, s, id) {\r\n                            var js, fjs = d.getElementsByTagName(s)[0];\r\n                            if (d.getElementById(id)) return;\r\n                            js = d.createElement(s); js.id = id;\r\n                            js.src = \'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js\';\r\n                            fjs.parentNode.insertBefore(js, fjs);\r\n                        }(document, \'script\', \'facebook-jssdk\'));</script>', 'THẾ MẠNH 1', 'Bạn có gì đặc biệt?', 'THẾ MẠNH 2', 'Bạn có gì đặc biệt?', 'THẾ MẠNH 3', 'Bạn có gì đặc biệt?', 'THẾ MẠNH 4', 'Bạn có gì đặc biệt?', '/images/banner/2019-10-31_5dbb1fcedce07.jpg', 'Giặt là 2019', 'Giặt là toàn quốc , Giặt là 2019 , giat la, giatla', 'Giặt là toàn quốc', 'SẢN PHẨM MỚI', 'Các mẫu sản phẩm mới nhất trong bộ sưu tập thu - đông năm nay', 'KHUYẾN MÃI', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '2019-10-29 05:28:17', '2019-11-01 01:26:11');
 
 -- --------------------------------------------------------
 
@@ -329,13 +359,13 @@ ALTER TABLE `galleries`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `services`

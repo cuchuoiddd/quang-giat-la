@@ -124,3 +124,96 @@ visibility: hidden;
     background-color: #03a84e!important;
     opacity: 0;
 }
+.question-popup a {
+    padding: 13px;
+    background: #ff4949;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 425px){
+    .product-grid .grid-item {
+        width: auto;
+        height: auto;
+        margin: 0 20px;
+    }
+}
+.product-grid .owl-nav button {
+    position: absolute;
+    top: 25%;
+    font-size: 72px !important;
+    line-height: 72px !important;
+    outline: none;
+    cursor: pointer;
+}
+
+.product-grid .owl-nav button.owl-next {
+    right: 15px;
+}
+.product-grid .owl-nav button.owl-prev {
+    left: 0;
+}
+.navbar-nav.visible-sm{
+    display: none;
+}
+.navbar-brand,
+.navbar-nav .icon-header{
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px){
+    .product-grid .owl-nav button.owl-next {
+        right: 0;
+    }
+    .chat-item {
+        display: flex;
+    }
+    .something-strong .grid-item {
+        width: 45%;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    /* #chat-social .widget-tooltip a {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .question-popup a {
+        padding: 0px;
+    }
+    
+    .question-popup a svg {
+        width: 21px;
+        height: 21px;
+    } */
+    
+    div#navbar-nav {
+        display: -webkit-box!important;
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+    
+    .navbar-expand-lg .navbar-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .navbar-expand-lg .navbar-collapse {
+        display: -webkit-box!important;
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+}
+@media only screen and (max-width: 600px) and (min-width: 320px){
+    .navbar-nav.hidden-sm{
+        display: none;
+    }
+    .navbar-nav.visible-sm{
+        display: inherit;
+    }
+}
+.header-top .spot-light-box .inner-box{
+    padding: 20px;
+}
