@@ -22,7 +22,7 @@
                     </div>
                     <div class="content pos-center">
                         <h2 class="heading">{{$featuredCollections[1]->title}}</h2>
-                        <h2 class="subheading with-topline">{{$featuredCollections[1]->description}}/h2>
+                        <h2 class="subheading with-topline">{{$featuredCollections[1]->description}}</h2>
                     </div>
                 </div>
                 <div class="sub block">

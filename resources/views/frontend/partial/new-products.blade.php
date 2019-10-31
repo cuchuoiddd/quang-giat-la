@@ -1,15 +1,15 @@
 @php
-    $limit_product = isset($settings->limit_product) && $settings->limit_product >= 0 ? $settings->limit_product : 4;
-    $featuredProducts = Helper::getFeaturedProducts($limit_product);
+    $limit_block_products = isset($setting->limit_block_products) && $setting->limit_block_products >= 0 ? $setting->limit_block_products : 4;
+    $featuredProducts = Helper::getFeaturedProducts($limit_block_products);
 @endphp
 
 <section class="product-grid new-product mb50">
     <div class="container">
         <div class="title">
-            <h1 class="heading">SẢN PHẨM MỚI</h1>
-            <h3 class="subheading">Các mẫu sản phẩm mới nhất trong bộ sưu tập thu - đông năm nay</h3>
+            <h1 class="heading">{{isset($setting->new_product_heading) ? $setting->new_product_heading : '' }}</h1>
+            <h3 class="subheading">{{isset($setting->new_product_subheading) ? $setting->new_product_subheading : '' }}</h3>
         </div>
-        <div class="content flex-between">
+        <div class="content flex-between owl-carousel">
             @if(isset($featuredProducts))
                 @foreach($featuredProducts as $product)
                     @php
