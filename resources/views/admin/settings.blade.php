@@ -23,8 +23,8 @@
                     <tbody>
                         @foreach($setting as $st)
                         <tr>
-                            <td><img src="{{isset($st->logo) ? url($st->logo) : ''}}" alt="{{isset($st->alt_logo) ? $st->alt_logo : ''}}"></td>
-                            <td><img src="{{isset($st->banner) ? url($st->banner) : ''}}" alt="{{isset($st->banner) ? $st->alt_banner : ''}}"></td>
+                            <td><img width="60" height="60" src="{{isset($st->logo) ? url($st->logo) : ''}}" alt="{{isset($st->alt_logo) ? $st->alt_logo : ''}}"></td>
+                            <td><img width="60" height="60" src="{{isset($st->banner) ? url($st->banner) : ''}}" alt="{{isset($st->banner) ? $st->alt_banner : ''}}"></td>
                             <td>{{isset($st->logo) ? $st->title : ''}}</td>
                             <td>{{isset($st->logo) ? $st->limit_product : 0}}</td>
                             <td>{{isset($st->logo) ? $st->copy_right : ''}}</td>
