@@ -29,6 +29,15 @@
     padding: 0 3px;
     position: relative;
 }
+
+@media (max-width : 576px) {
+    #chat-social .widget-tooltip {
+        margin-bottom: 4px;
+        /*margin-bottom: 1px;*/
+        padding: 0 3px;
+        position: relative;
+    }
+}
 #chat-social .widget-tooltip a {
     width: 45pt;
     /* padding: 18px; */
