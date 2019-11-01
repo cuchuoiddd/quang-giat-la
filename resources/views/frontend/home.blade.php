@@ -10,6 +10,7 @@
     <meta name="title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}">
     <meta name="description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}">
     <meta name="keywords" content="{{isset($setting->meta_keyword) ? $setting->meta_keyword : '' }}">
+    <link rel="shortcut icon" type="image/png" href="{{$setting->logo}}"/>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
