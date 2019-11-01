@@ -33,6 +33,7 @@ class AlterSettingsAddColumn extends Migration
             $table->text('new_product_subheading')->nullable()->after('new_product_heading');
             $table->text('sale_product_heading')->nullable()->after('new_product_subheading');
             $table->text('sale_product_subheading')->nullable()->after('sale_product_heading');
+            $table->text('limit_block_products')->nullable()->after('alt_footer_logo');
         });
     }
 
