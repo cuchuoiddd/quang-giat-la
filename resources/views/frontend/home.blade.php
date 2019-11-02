@@ -182,26 +182,25 @@
 {{--                    <div id="widget-btn-facebook" class="widget-btn-float-container widget-tooltip">--}}
 {{--                        <a href="javascript:void(0);" class="widget-menu-facebook">--}}
 {{--                            <span class="button_tap"></span></a>--}}
-                            {!!isset($setting->fb_widget_code) ? $setting->fb_widget_code : '' !!}
                         <!-- Your customer chat code -->
-
+            {!!isset($setting->fb_widget_code) ? $setting->fb_widget_code : '' !!}
                         <!-- Your customer chat code -->
 
 {{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat ngay để nhận tư vấn</div>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
-                <div class="tawk-to-gv88">
-                    <div id="widget-btn-tawk_to" class="widget-btn-float-container widget-tooltip">
-                        <a href="javascript:void(0);" class="widget-menu-tawk-to" data-action="widget_current_channel = 'tawk_to'; penTawkToPopup();">
-                            <span class="button_tap"></span>
-                        </a>
+{{--                <div class="tawk-to-gv88">--}}
+{{--                    <div id="widget-btn-tawk_to" class="widget-btn-float-container widget-tooltip">--}}
+{{--                        <a href="javascript:void(0);" class="widget-menu-tawk-to" data-action="widget_current_channel = 'tawk_to'; penTawkToPopup();">--}}
+{{--                            <span class="button_tap"></span>--}}
+{{--                        </a>--}}
 {{--                        <div class="widget-menu-tawk-to"></div>--}}
 {{--                        {!!isset($setting->tawk_to_widget_code) ? $setting->tawk_to_widget_code : '' !!}--}}
-                        <!--End of Tawk.to Script-->
+{{--                        <!--End of Tawk.to Script-->--}}
 {{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat trực tiếp cho chúng tôi--}}
 {{--                        </div>--}}
-                    </div>
-                </div>
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
 	</footer>
