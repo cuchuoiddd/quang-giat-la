@@ -1,8 +1,11 @@
 /node_modules
-/public/hot
+public/BE/plugins/moment
+/public/uploads
+/public/images
 /public/storage
 /storage/*.key
 /vendor
+.idea
 .env
 .phpunit.result.cache
 Homestead.json
