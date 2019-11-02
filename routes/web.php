@@ -18,6 +18,7 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', 'HomeController@index');
+Route::get('/policy', 'HomeController@policy');
 // Route::get('danh-muc/san-pham', 'HomeController@products');
 // Route::get('danh-muc/san-pham/{slug}', 'HomeController@products');
 // Route::get('san-pham/{slug}', 'HomeController@product');
