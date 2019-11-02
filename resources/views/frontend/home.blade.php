@@ -183,7 +183,31 @@
 {{--                        <a href="javascript:void(0);" class="widget-menu-facebook">--}}
 {{--                            <span class="button_tap"></span></a>--}}
                         <!-- Your customer chat code -->
-            {!!isset($setting->fb_widget_code) ? $setting->fb_widget_code : '' !!}
+{{--            {!!isset($setting->fb_widget_code) ? $setting->fb_widget_code : '' !!}--}}
+            <!-- Load Facebook SDK for JavaScript -->
+                <div id="fb-root"></div>
+                <script>
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                            xfbml            : true,
+                            version          : 'v4.0'
+                        });
+                    };
+
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                <!-- Your customer chat code -->
+                <div class="fb-customerchat"
+                     attribution=setup_tool
+                     page_id="158578774511775"
+                     theme_color="#fa3c4c">
+                </div>
                         <!-- Your customer chat code -->
 
 {{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat ngay để nhận tư vấn</div>--}}
