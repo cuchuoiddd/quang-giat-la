@@ -159,61 +159,41 @@
 		</div>
         <div id="chat-social">
             <div class="chat-item">
-{{--                <div class="zalo-group-gv88">--}}
-{{--                    <div id="widget-btn-zalo" class="widget-btn-float-container widget-tooltip">--}}
-{{--                        <a target="_blank" href="{{isset($setting->zalo_link) ? $setting->zalo_link : '' }}" class="widget-btn-float zalo-color widget-menu-zalo">--}}
-{{--                            <span class="button_tap"></span>--}}
-{{--                        </a>--}}
-{{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat với chúng tôi qua Zalo--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="question-popup">--}}
-{{--                    <div id="widget-btn-contact_form" class="widget-btn-float-container widget-tooltip">--}}
-{{--                        <a href="tel:{!!isset($setting->phone) ? $setting->phone : '' !!}" id="chat-feedback-customer" class="widget-menu-contact-form">--}}
-{{--                            <span class="button_tap active"></span>--}}
-{{--                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>--}}
-{{--                        </a>--}}
-{{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Để lại lời nhắn cho chúng tôi--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div class="zalo-group-gv88">
+                    <div id="widget-btn-zalo" class="widget-btn-float-container widget-tooltip">
+                        <a target="_blank" href="{{isset($setting->zalo_link) ? $setting->zalo_link : '' }}"
+                           class="widget-btn-float zalo-color widget-menu-zalo">
+                            <span class="button_tap"></span>
+                        </a>
+                        <div class="widget-tooltiptext"
+                             style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat với chúng tôi qua
+                            Zalo
+                        </div>
+                    </div>
+                </div>
+                <div class="question-popup">
+                    <div id="widget-btn-contact_form" class="widget-btn-float-container widget-tooltip">
+                        <a href="tel:{!!isset($setting->phone) ? $setting->phone : '' !!}" id="chat-feedback-customer"
+                           class="widget-menu-contact-form">
+                            <span class="button_tap active"></span>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt"
+                                 class="svg-inline--fa fa-phone-alt fa-w-16" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                      d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+                            </svg>
+                        </a>
+                        <div class="widget-tooltiptext"
+                             style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Để lại lời nhắn cho
+                            chúng tôi
+                        </div>
+                    </div>
+                </div>
                 <div class="facebook-messager-gv88">
-{{--                    <div id="widget-btn-facebook" class="widget-btn-float-container widget-tooltip">--}}
-{{--                        <a href="javascript:void(0);" class="widget-menu-facebook">--}}
-{{--                            <span class="button_tap"></span></a>--}}
                         <!-- Your customer chat code -->
-{{--            {!!isset($setting->fb_widget_code) ? $setting->fb_widget_code : '' !!}--}}
+            {!!isset($setting->fb_widget_code) ? $setting->fb_widget_code : '' !!}
             <!-- Load Facebook SDK for JavaScript -->
-                <div id="fb-root"></div>
-                <script>
-                    window.fbAsyncInit = function() {
-                        FB.init({
-                            xfbml            : true,
-                            version          : 'v4.0'
-                        });
-                    };
 
-                    (function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
-
-                <!-- Your customer chat code -->
-                <div class="fb-customerchat"
-                     attribution=setup_tool
-                     page_id="158578774511775"
-                     theme_color="#fa3c4c">
-                </div>
-                        <!-- Your customer chat code -->
-
-    <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat ngay để
-        nhận tư vấn
-    </div>
-                </div>
             </div>
 {{--                <div class="tawk-to-gv88">--}}
 {{--                    <div id="widget-btn-tawk_to" class="widget-btn-float-container widget-tooltip">--}}
