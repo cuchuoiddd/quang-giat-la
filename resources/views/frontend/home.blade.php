@@ -35,6 +35,9 @@
         .header-top{
             background-image: url('{{url($setting->banner_image)}}');
         }
+        .fb_dialog_mobile{
+            display: inline-block !important;
+        }
     </style>
     @endif
     <title>{{isset($setting->title) ? $setting->title : '' }}</title>
