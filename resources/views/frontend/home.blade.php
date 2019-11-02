@@ -19,8 +19,8 @@
     <meta property="og:url" content="https://gialatoanquoc.com/" />
     <meta property="og:site_name" content="WashPlus - App giặt là số 1 Việt Nam" />
     <meta property="fb:page_id" content="158578774511775" />
-    <meta property="og:image" content="{{$setting->logo}}" />
-    <meta property="og:image:secure_url" content="{{$setting->logo}}" />
+    <meta property="og:image" content="https://gialatoanquoc.com{{$setting->logo}}" />
+    <meta property="og:image:secure_url" content="https://gialatoanquoc.com{{$setting->logo}}" />
 {{--    end meta og--}}
 
 	<!-- Bootstrap CSS -->
