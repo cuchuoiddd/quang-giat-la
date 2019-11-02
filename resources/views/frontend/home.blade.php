@@ -12,6 +12,17 @@
     <meta name="description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}">
     <meta name="keywords" content="{{isset($setting->meta_keyword) ? $setting->meta_keyword : '' }}">
     <link rel="shortcut icon" type="image/png" href="{{$setting->logo}}"/>
+{{--    Meta og--}}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}" />
+    <meta property="og:description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}" />
+    <meta property="og:url" content="https://gialatoanquoc.com/" />
+    <meta property="og:site_name" content="WashPlus - App giặt là số 1 Việt Nam" />
+    <meta property="fb:page_id" content="158578774511775" />
+    <meta property="og:image" content="{{$setting->logo}}" />
+    <meta property="og:image:secure_url" content="{{$setting->logo}}" />
+{{--    end meta og--}}
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
