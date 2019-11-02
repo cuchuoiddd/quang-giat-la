@@ -192,10 +192,11 @@
                         <a href="javascript:void(0);" class="widget-menu-tawk-to" data-action="widget_current_channel = 'tawk_to'; penTawkToPopup();">
                             <span class="button_tap"></span>
                         </a>
-                        {!!isset($setting->tawk_to_widget_code) ? $setting->tawk_to_widget_code : '' !!}
+{{--                        <div class="widget-menu-tawk-to"></div>--}}
+{{--                        {!!isset($setting->tawk_to_widget_code) ? $setting->tawk_to_widget_code : '' !!}--}}
                         <!--End of Tawk.to Script-->
-                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat trực tiếp cho chúng tôi
-                        </div>
+{{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat trực tiếp cho chúng tôi--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
