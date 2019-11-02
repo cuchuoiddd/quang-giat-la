@@ -7,9 +7,9 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}">
-    <meta name="description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}">
-    <meta name="keywords" content="{{isset($setting->meta_keyword) ? $setting->meta_keyword : '' }}">
+    <meta name="title" content="Điều khoản quy định bảo mật Giatlatoanquoc.com">
+    <meta name="description" content="MỤC ĐÍCH VÀ PHẠM VI THU THẬP THÔNG TIN KHÁCH HÀNG WASHPLUS ...">
+    <meta name="keywords" content="giatlatoanquoc.com, washplus, wash plus, giat la toan quoc">
     <link rel="shortcut icon" type="image/png" href="{{$setting->logo}}"/>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
