@@ -7,6 +7,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="google-site-verification" content="zvJpG7X4_dW54MsfGpamC9UPvAMvae78RWLj2TBUfzM" />
     <meta name="title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}">
     <meta name="description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}">
     <meta name="keywords" content="{{isset($setting->meta_keyword) ? $setting->meta_keyword : '' }}">
