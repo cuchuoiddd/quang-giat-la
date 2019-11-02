@@ -1,6 +1,6 @@
 @php
-    $limit_block_products = isset($setting->limit_block_products) && $setting->limit_block_products >= 0 ? $setting->limit_block_products : 4;
-    $featuredProducts = Helper::getFeaturedProducts($limit_block_products);
+    $limit_block_products = isset($setting->limit_block_products) && $setting->limit_block_products >= 0 ? $setting->limit_block_products : 10;
+    $featuredProducts = Helper::getFeaturedSaleProducts($limit_block_products);
 @endphp
 
 <section class="product-grid new-product mb50">

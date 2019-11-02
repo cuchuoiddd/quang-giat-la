@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Helpers;
+
 use App\Article;
 use App\Category;
 use App\Menu;
@@ -9,90 +10,112 @@ use App\Gallery;
 use App\Setting;
 use App\Policy;
 use App\Product;
+
 class Helper
 {
     public static function shout(string $string)
     {
         return strtoupper($string);
     }
-    public static function truncate($text, $chars = 25) {
+
+    public static function truncate($text, $chars = 25)
+    {
         if (strlen($text) <= $chars) {
             return $text;
         }
-        $text = $text." ";
-        $text = substr($text,0,$chars);
-        $text = substr($text,0,strrpos($text,' '));
-        $text = $text."...";
+        $text = $text . " ";
+        $text = substr($text, 0, $chars);
+        $text = substr($text, 0, strrpos($text, ' '));
+        $text = $text . "...";
         return $text;
     }
+
     public static function getMostViewed()
     {
         $exclude_categories = [];
-        $sidebarCategories = Category::where('show_sidebar','on')->get();
-        foreach($sidebarCategories as $cate){
-            array_push($exclude_categories,$cate->id);
+        $sidebarCategories = Category::where('show_sidebar', 'on')->get();
+        foreach ($sidebarCategories as $cate) {
+            array_push($exclude_categories, $cate->id);
         }
-        return Article::whereNotIn('category_id',$exclude_categories)->take(10)->orderBy('views','desc')->get();
+        return Article::whereNotIn('category_id', $exclude_categories)->take(10)->orderBy('views', 'desc')->get();
     }
+
     public static function getRelatedArticle($exclude_id = 0)
     {
-        return Article::where('publish',1)->where('id','<>',$exclude_id)->take(4)->orderBy('views','desc')->get();
+        return Article::where('publish', 1)->where('id', '<>', $exclude_id)->take(4)->orderBy('views', 'desc')->get();
     }
+
     public static function articlesSidebar()
     {
         $articles_sidebar = null;
         $sidebar_category = Category::whereType('0')->whereShowSidebar('on')->first();
-        if($sidebar_category){
-            $articles_sidebar = Article::where('category_id',$sidebar_category->id)->take(2)->get();
+        if ($sidebar_category) {
+            $articles_sidebar = Article::where('category_id', $sidebar_category->id)->take(2)->get();
         }
         return $articles_sidebar;
     }
-    public static function getMenu($type='main-menu')
+
+    public static function getMenu($type = 'main-menu')
     {
-        if($type == 'main-menu'){
+        if ($type == 'main-menu') {
             $menu = Menu::whereType(1)->first();
-        }else if ($type == 'footer-menu-1'){
-            $menu = Menu::whereType(2)->first();
-        }else{
-            $menu = Menu::whereType(3)->first();
+        } else {
+            if ($type == 'footer-menu-1') {
+                $menu = Menu::whereType(2)->first();
+            } else {
+                $menu = Menu::whereType(3)->first();
+            }
         }
-        
-        if(isset($menu)){
+
+        if (isset($menu)) {
             $menu->items = $menu->items;
             return $menu;
         }
-        return ;
-        
+        return;
+
     }
+
     public static function getSlide($isAdvertise)
     {
-        if(!$isAdvertise){
+        if (!$isAdvertise) {
             $res = Slide::orderBy('position')->get();
-        }else{
+        } else {
             $res = Slide::orderBy('position')->firstOrFail();
         }
         return $res;
     }
+
     public static function getFeaturedProducts($num = 4)
     {
-        return Product::where('isFeatured',1)->take($num)->orderBy('created_at','desc')->get();
+        return Product::where('isFeatured', 1)->where('discount_percent', null)->take($num)->orderBy('created_at', 'desc')->get();
     }
+
+    public static function getFeaturedSaleProducts($num = 20)
+    {
+        return Product::where('isFeatured', 1)->where('discount_percent', '>', 0)->take($num)
+            ->orderBy('created_at', 'desc')->get();
+    }
+
     public static function getFeaturedCollections($num = 4)
     {
-        return Category::where('isFeatured',1)->take($num)->orderBy('created_at','desc')->get();
+        return Category::where('isFeatured', 1)->take($num)->orderBy('created_at', 'desc')->get();
     }
+
     public static function getPartners($num = 4)
     {
-        return Gallery::take($num)->orderBy('position')->orderBy('created_at','desc')->get();
+        return Gallery::take($num)->orderBy('position')->orderBy('created_at', 'desc')->get();
     }
+
     public static function getGalleries()
     {
         return Gallery::orderBy('position')->get();
     }
+
     public static function getSettings()
     {
         return Setting::first();
     }
+
     public static function getPolicies()
     {
         return Policy::all();
