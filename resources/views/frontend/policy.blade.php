@@ -124,7 +124,6 @@
 
         <h3>b. Địa chỉ của đơn vị thu thập v&agrave; quản l&yacute; th&ocirc;ng tin c&aacute; nh&acirc;n.</h3>
 
-        <p>C&Ocirc;NG TY CỔ PHẦN VINSOFTS<br />
             Địa chỉ:&nbsp;To&agrave; Golden West ,&nbsp;số 2 L&ecirc; Văn Thi&ecirc;m, Quận Thanh Xu&acirc;n, H&agrave; Nội, Q.Thanh Xu&acirc;n, H&agrave; Nội,&nbsp; Việt Nam<br />
             Điện thoại: 0906.68.83.86 (Thời gian hỗ trợ từ 8:00am đến 5:00pm)</p>
 
@@ -136,7 +135,6 @@
 
         <p>Mọi thắc mắc qu&yacute; kh&aacute;ch h&agrave;ng c&oacute; thể li&ecirc;n hệ trực tiếp đến c&ocirc;ng ty để được giải đ&aacute;p:</p>
 
-        <p>C&Ocirc;NG TY CỔ PHẦN VINSOFTS<br />
             Địa chỉ:&nbsp;To&agrave; Golden West ,&nbsp;số 2 L&ecirc; Văn Thi&ecirc;m, Quận Thanh Xu&acirc;n, H&agrave; Nội, Q.Thanh Xu&acirc;n, H&agrave; Nội,&nbsp; Việt Nami<br />
             Điện thoại: 0906.68.83.86 (Thời gian hỗ trợ từ 8:00am đến 5:00pm)</p>
 
