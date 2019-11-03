@@ -129,13 +129,13 @@
 
         <h3>c. Cam kết bảo mật th&ocirc;ng tin kh&aacute;ch h&agrave;ng</h3>
 
-        <p>Ch&uacute;ng t&ocirc;i cam kết bảo đảm an to&agrave;n th&ocirc;ng tin cho kh&aacute;ch h&agrave;ng khi gửi th&ocirc;ng tin c&aacute; nh&acirc;n tới <strong>giatlatoanquoc.com </strong>(<strong>WashPlus</strong>). Ch&uacute;ng t&ocirc;i cam kết kh&ocirc;ng trao đổi mua b&aacute;n th&ocirc;ng tin kh&aacute;ch h&agrave;ng v&igrave; mục đ&iacute;ch thương mại. Mọi sự chia sẻ v&agrave; sử dụng th&ocirc;ng tin kh&aacute;ch h&agrave;ng, ch&uacute;ng t&ocirc;i cam kết thực hiện theo ch&iacute;nh s&aacute;ch bảo mật của Vinsofts.com.<br />
+        <p>Ch&uacute;ng t&ocirc;i cam kết bảo đảm an to&agrave;n th&ocirc;ng tin cho kh&aacute;ch h&agrave;ng khi gửi th&ocirc;ng tin c&aacute; nh&acirc;n tới <strong>giatlatoanquoc.com </strong>(<strong>WashPlus</strong>). Ch&uacute;ng t&ocirc;i cam kết kh&ocirc;ng trao đổi mua b&aacute;n th&ocirc;ng tin kh&aacute;ch h&agrave;ng v&igrave; mục đ&iacute;ch thương mại. Mọi sự chia sẻ v&agrave; sử dụng th&ocirc;ng tin kh&aacute;ch h&agrave;ng, ch&uacute;ng t&ocirc;i cam kết thực hiện theo ch&iacute;nh s&aacute;ch bảo mật của <strong>giatlatoanquoc.com </strong>(<strong>WashPlus</strong>).<br />
             Ch&uacute;ng t&ocirc;i cam kết sẽ khiến qu&yacute; kh&aacute;ch h&agrave;ng cảm thấy tin tưởng v&agrave; h&agrave;i l&ograve;ng về bảo mật th&ocirc;ng tin c&aacute; nh&acirc;n khi tham giam v&agrave; sử dụng những dịch vụ của ch&uacute;ng t&ocirc;i.<br />
             Ch&iacute;nh s&aacute;ch bảo mật th&ocirc;ng tin chỉ &aacute;p dụng những th&ocirc;ng tin m&agrave; qu&yacute; kh&aacute;ch h&agrave;ng gửi th&ocirc;ng tin tr&ecirc;n website ch&iacute;nh thức của <strong>giatlatoanquoc.com </strong>(<strong>WashPlus</strong>). Mọi th&ocirc;ng tin qu&yacute; kh&aacute;ch đăng k&yacute; tại những website hoặc những địa chỉ kh&aacute;c đều kh&ocirc;ng thuộc phạm vi hiệu lực của ch&iacute;nh s&aacute;ch bảo mật th&ocirc;ng tin n&agrave;y. Ch&uacute;ng t&ocirc;i lu&ocirc;n nhấn mạnh khẳng định rằng: Ch&uacute;ng t&ocirc;i rất coi trọng quyền lợi được bảo mật th&ocirc;ng tin của qu&yacute; kh&aacute;ch h&agrave;ng. Nếu như qu&yacute; kh&aacute;ch h&agrave;ng c&oacute; bất cứ thắc mắc hay g&oacute;p &yacute; n&agrave;o li&ecirc;n quan đến ch&iacute;nh s&aacute;ch bảo mật của <strong>giatlatoanquoc.com </strong>(<strong>WashPlus</strong>)</p>
 
         <p>Mọi thắc mắc qu&yacute; kh&aacute;ch h&agrave;ng c&oacute; thể li&ecirc;n hệ trực tiếp đến c&ocirc;ng ty để được giải đ&aacute;p:</p>
 
-            Địa chỉ:&nbsp;To&agrave; Golden West ,&nbsp;số 2 L&ecirc; Văn Thi&ecirc;m, Quận Thanh Xu&acirc;n, H&agrave; Nội, Q.Thanh Xu&acirc;n, H&agrave; Nội,&nbsp; Việt Nami<br />
+            Địa chỉ:&nbsp;To&agrave; Golden West ,&nbsp;số 2 L&ecirc; Văn Thi&ecirc;m, Quận Thanh Xu&acirc;n, H&agrave; Nội, Q.Thanh Xu&acirc;n, H&agrave; Nội,&nbsp; Việt Nam<br />
             Điện thoại: 0906.68.83.86 (Thời gian hỗ trợ từ 8:00am đến 5:00pm)</p>
 
         <p>BQT <strong>giatlatoanquoc.com </strong>(<strong>WashPlus</strong>)</p>
@@ -145,11 +145,13 @@
 	<section class="contact mb50">
 		<div class="container">
 			<div class="content flex-between">
-				<div class="grid-item heading">
-					<h1 class="title">Bạn cần chúng tôi giúp đỡ?</h1>
-					<p class="des">Mô tả thông tin có giá trị, những điểm nổi bật, lời giới thiệu hấp dẫn về sản phẩm
-						dịch vụ.</p>
-				</div>
+                <div class="grid-item heading">
+                    <h1 class="title">HỆ THỐNG GIẶT LÀ TOÀN QUỐC</h1>
+                    <p class="des">Địa chỉ:Toà Golden West , số 2 Lê Văn Thiêm, Q.Thanh Xuân, Hà Nội, Việt Nam</p>
+                    <p class="des">Mail: giatlatoanquoc@gmail.com</p>
+                    <p class="des">Website: giatlatoanquoc.com</p>
+                    <p class="des">App: Washplus</p>
+                </div>
 				<div class="grid-item action-wrapper">
 					<div class="hotline">
 						<div class="title">Hỗ trợ khách hàng 24/24</div>
@@ -185,8 +187,8 @@
                     </div>
                 </div>
                 <div class="question-popup">
-                    <div id="widget-btn-contact_form" class="widget-btn-float-container widget-tooltip">
-                        <a href="tel:{!!isset($setting->phone) ? $setting->phone : '' !!}" id="chat-feedback-customer" class="widget-menu-contact-form">
+                    <div id="widget-btn-contact_form" class="widget-btn-float-container widget-tooltip" >
+                        <a href="tel:{!!isset($setting->phone) ? $setting->phone : '' !!}" id="chat-feedback-customer" class="widget-menu-contact-form" style="-webkit-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;">
                             <span class="button_tap active"></span>
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
                         </a>
@@ -211,9 +213,9 @@
                         <a href="javascript:void(0);" class="widget-menu-tawk-to" data-action="widget_current_channel = 'tawk_to'; penTawkToPopup();">
                             <span class="button_tap"></span>
                         </a>
-                        {!!isset($setting->tawk_to_widget_code) ? $setting->tawk_to_widget_code : '' !!}
+{{--                        {!!isset($setting->tawk_to_widget_code) ? $setting->tawk_to_widget_code : '' !!}--}}
                         <!--End of Tawk.to Script-->
-                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat trực tiếp cho chúng tôi
+{{--                        <div class="widget-tooltiptext" style="cursor: pointer;  background-color: rgba(29, 36, 62, 0.7); ">Chat trực tiếp cho chúng tôi--}}
                         </div>
                     </div>
                 </div>
