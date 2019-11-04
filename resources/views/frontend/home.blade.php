@@ -13,14 +13,13 @@
     <meta name="keywords" content="{{isset($setting->meta_keyword) ? $setting->meta_keyword : '' }}">
     <link rel="shortcut icon" type="image/png" href="{{$setting->logo}}"/>
     {{--    Meta og--}}
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}"/>
-    <meta property="og:description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}"/>
-    <meta property="og:url" content="https://gialatoanquoc.com/"/>
     <meta property="og:site_name" content="WashPlus - App giặt là số 1 Việt Nam"/>
-    <meta property="fb:page_id" content="158578774511775"/>
+    <meta property="fb:app_id" content="799857890468063"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://gialatoanquoc.com/policy"/>
+    <meta property="og:title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}"/>
     <meta property="og:image" content="https://gialatoanquoc.com{{$setting->logo}}"/>
-    <meta property="og:image:secure_url" content="https://gialatoanquoc.com{{$setting->logo}}"/>
+    <meta property="og:description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}"/>
     {{--    end meta og--}}
 
 <!-- Bootstrap CSS -->
@@ -46,6 +45,27 @@
 </head>
 
 <body>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '799857890468063',
+            xfbml: true,
+            version: 'v5.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <header class="header-top mb50">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
