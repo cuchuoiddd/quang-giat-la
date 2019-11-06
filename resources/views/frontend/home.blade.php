@@ -16,11 +16,11 @@
     <meta property="og:site_name" content="WashPlus - App giặt là số 1 Việt Nam"/>
     <meta property="fb:app_id" content="799857890468063"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://gialatoanquoc.com"/>
+    <meta property="og:url" content="https://giatlatoanquoc.com/"/>
     <meta property="og:title" content="{{isset($setting->meta_title) ? $setting->meta_title : '' }}"/>
-    <meta property="og:image" content="https://gialatoanquoc.com{{$setting->logo}}"/>
+    <meta property="og:image" content="https://giatlatoanquoc.com{{$setting->logo}}"/>
     <meta property="og:description" content="{{isset($setting->meta_description) ? $setting->meta_description : '' }}"/>
-{{--    <link rel="canonical" href="https://gialatoanquoc.com" />--}}
+    <link rel="canonical" href="https://giatlatoanquoc.com" />
     {{--    end meta og--}}
 
 <!-- Bootstrap CSS -->
