@@ -123,9 +123,9 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="images" class="control-label col-sm-2"><span>Ảnh</span></label>
+                                <label for="images" class="control-label col-sm-2 required"><span>Ảnh</span></label>
                                 <div class="col-sm-10">
-                                    <input type="file" class="image form-control" id="image" name="image">
+                                    <input {{isset($category) && isset($category->image)?:"required"}} type="file" class="image form-control" id="image" name="image">
                                     <img style="max-width:150px" src="{{isset($category) && isset($category->image) ? url($category->image) : ''}}" />
                                 </div>
                             </div>
