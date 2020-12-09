@@ -6,44 +6,45 @@
         <div class="flex-between flex-wrap-mobile">
             <div class="block">
                 <div class="thumb">
-                    <img src="{{url(@$featuredCollections[0]->image)}}"
-                        alt="{{@$featuredCollections[0]->title}}">
+                    <img
+                        src="{{url(count($featuredCollections) && isset($featuredCollections[0])? $featuredCollections[0]->image:'')}}"
+                        alt="{{count($featuredCollections) && isset($featuredCollections[0])?$featuredCollections[0]->title:''}}">
                 </div>
                 <div class="content pos-bot-right">
-                    <h2 class="heading with-underline">{{@$featuredCollections[0]->title}}</h2>
-                    <h2 class="subheading">{{@$featuredCollections[0]->description}}</h2>
+                    <h2 class="heading with-underline">{{count($featuredCollections) && isset($featuredCollections[0])?$featuredCollections[0]->title:''}}</h2>
+                    <h2 class="subheading">{{count($featuredCollections) && isset($featuredCollections[0])?$featuredCollections[0]->description:''}}</h2>
                 </div>
             </div>
             <div class="block flex-between flex-column auto-at-mobile">
                 <div class="sub block">
                     <div class="thumb">
-                        <img src="{{url(@$featuredCollections[1]->image)}}"
-                            alt="{{@$featuredCollections[1]->title}}">
+                        <img src="{{url(count($featuredCollections) && isset($featuredCollections[1])? $featuredCollections[1]->image:'')}}"
+                             alt="{{count($featuredCollections) && isset($featuredCollections[1])?$featuredCollections[1]->title:''}}">
                     </div>
                     <div class="content pos-center">
-                        <h2 class="heading">{{@$featuredCollections[1]->title}}</h2>
-                        <h2 class="subheading with-topline">{{@$featuredCollections[1]->description}}</h2>
+                        <h2 class="heading">{{count($featuredCollections) && isset($featuredCollections[1])?$featuredCollections[1]->title:''}}</h2>
+                        <h2 class="subheading with-topline">{{count($featuredCollections) && isset($featuredCollections[1])?$featuredCollections[1]->description:''}}</h2>
                     </div>
                 </div>
                 <div class="sub block">
                     <div class="thumb">
-                        <img src="{{url(@$featuredCollections[2]->image)}}"
-                            alt="{{@$featuredCollections[2]->title}}">
+                        <img src="{{url(count($featuredCollections) && isset($featuredCollections[2])? $featuredCollections[2]->image:'')}}"
+                             alt="{{count($featuredCollections) && isset($featuredCollections[2])?$featuredCollections[2]->title:''}}">
                     </div>
                     <div class="content pos-center">
-                        <h2 class="heading">{{@$featuredCollections[2]->title}}</h2>
-                        <h2 class="subheading with-topline">{{@$featuredCollections[2]->description}}</h2>
+                        <h2 class="heading">{{count($featuredCollections) && isset($featuredCollections[2])?$featuredCollections[2]->title:''}}</h2>
+                        <h2 class="subheading with-topline">{{count($featuredCollections) && isset($featuredCollections[2])?$featuredCollections[2]->description:''}}</h2>
                     </div>
                 </div>
             </div>
             <div class="block">
                 <div class="thumb">
-                    <img src="{{url(@$featuredCollections[3]->image)}}"
-                        alt="{{@$featuredCollections[3]->title}}">
+                    <img src="{{url(count($featuredCollections) && isset($featuredCollections[3])? $featuredCollections[3]->image:'')}}"
+                         alt="{{count($featuredCollections) && isset($featuredCollections[3])?$featuredCollections[3]->title:''}}">
                 </div>
                 <div class="content pos-bot-left">
-                    <h2 class="heading with-underline">{{@$featuredCollections[3]->title}}</h2>
-                    <h2 class="subheading">{{@$featuredCollections[3]->description}}</h2>
+                    <h2 class="heading with-underline">{{count($featuredCollections) && isset($featuredCollections[3])?$featuredCollections[2]->title:''}}</h2>
+                    <h2 class="subheading">{{count($featuredCollections) && isset($featuredCollections[3])?$featuredCollections[3]->description:''}}</h2>
                 </div>
             </div>
         </div>
