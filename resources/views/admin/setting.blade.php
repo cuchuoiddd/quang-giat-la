@@ -310,6 +310,13 @@
                                         name="meta_description">{{ $isAdd ? '' : $setting->meta_description }}</textarea>
                                 </div>
                             </div>
+{{--                            <div class="form-group col-md-6">--}}
+{{--                                <label for="meta_title" class="col-sm-2 control-label">Meta title</label>--}}
+{{--                                <div class="col-sm-10">--}}
+{{--                                    <input type="text" class="form-control" id="meta_title" placeholder=""--}}
+{{--                                           name="meta_title" value="{{ $isAdd ? '' : $setting->meta_title }}">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
 
                         @if (session('success'))
